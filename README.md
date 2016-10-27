@@ -9,3 +9,4 @@ In the terminal, type
 chmod +x file-name.py
 ./file-name.py args (if any needed)
 ```
+PS: I would advise creating an alias for the commands because that only makes it easier. Check this link: http://askubuntu.com/questions/17536/how-do-i-create-a-permanent-bash-alias 

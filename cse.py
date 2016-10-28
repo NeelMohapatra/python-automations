@@ -10,6 +10,9 @@ chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 
 if len(sys.argv) > 1:
     for num in sys.argv[1:]:
-        webbrowser.get(chrome_path).open_new_tab('https://cs.uw.edu/' + num)
+        if len(num) > 3:
+            webbrowser.get(chrome_path).open_new_tab('https://courses.cs.washington.edu/courses/' + num[0:3] + '/' + num[3:])
+        else:
+            webbrowser.get(chrome_path).open_new_tab('https://cs.uw.edu/' + num)
 else:
-    print('\tPass in the course numbers as arguments.')
+    print('\tPass in the course numbers [or quarter numbers] as arguments.')

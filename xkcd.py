@@ -1,10 +1,9 @@
 #! /usr/bin/env python3
 import os, random
 rand_num = random.randint(1, 1788)
-print(rand_num)
-link = os.popen("curl https://xkcd.com/" + str(rand_num) + "/  | grep 'Image URL'").read().split()[-1]
+os.system('curl -s https://xkcd.com/' + str(rand_num) + '/ > temp')
+link = os.popen("grep 'Image URL' temp").read().split()[-1]
 
-print(link)
 img = link.split('/')[-1]
-os.system('wget ' + link + ' && ./imgcat ' + img)
-os.system('rm ' + img)
+os.system('wget -nv ' + link + ' && ./imgcat ' + img)
+os.system('rm temp ' + img)

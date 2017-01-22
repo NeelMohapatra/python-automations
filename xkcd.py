@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 import os, random
-rand_num = random.randint(1, 1650)
+rand_num = random.randint(1, 1788)
 print(rand_num)
 link = os.popen("curl https://xkcd.com/" + str(rand_num) + "/  | grep 'Image URL'").read().split()[-1]
 

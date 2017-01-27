@@ -7,3 +7,4 @@ page = json.loads(requests.get('http://xkcd.com/info.0.json').text)
 link = page['img']
 img = link.split('/')[-1]
 os.system('wget -q ' + link + ' && ./imgcat ' + img)
+os.system('rm ' + img)

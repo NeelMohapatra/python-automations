@@ -11,3 +11,4 @@ link = random_page['img']
 img = link.split('/')[-1]
 os.system('wget -q ' + link + ' && ./imgcat ' + img)
 os.system('rm ' + img)
+print(random_page['alt'])
